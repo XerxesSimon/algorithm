@@ -12,11 +12,15 @@ struct edge {
 
 int p[N], eid;
 int dis[N];
+int fa[N];
 void init()
 {
     eid = 0;
     memset(p, -1, sizeof p);
     memset(dis, inf, sizeof dis);
+    for (int i = 0; i < N; i++) {
+        fa[i] = i;
+    }
 }
 void add(int u, int v, int w)
 {
@@ -33,9 +37,20 @@ void dfs(int u)
         int w = e[i].w;
         if (dis[v] > dis[u] + w) {
             dis[v] = dis[u] + w;
+            fa[v] = u;
             dfs(v);
         }
     }
+}
+
+void print(int u)
+{
+    if (fa[u] == u) {
+        cout << u;
+        return;
+    }
+    print(fa[u]);
+    cout << " -> " << u;
 }
 
 int main()
@@ -52,7 +67,8 @@ int main()
         }
         dis[1] = 0;
         dfs(1);
-        cout << dis[n] << endl;
+        print(n);
+        cout << endl << dis[n] << endl;
     }
     return 0;
 }

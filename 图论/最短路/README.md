@@ -12,3 +12,6 @@
 - A* （图，太稠密，这道题通不过）
 - Hill Climbing （爬山算法）
 - SA,Simulated Annealing （模拟退火）
+
+
+- DFS 记录路径
