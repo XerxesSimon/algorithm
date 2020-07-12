@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 2e3 + 9;
+const int N = 1e3 + 9;
 int A[N], len;
 
 void push(int val)
@@ -37,7 +37,8 @@ int pop()
     return res;
 }
 
-int main() {
+int main()
+{
     int t;
     cin >> t;
     while (t--) {
