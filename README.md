@@ -1,11 +1,18 @@
 # 算法总结
 
 - 基础算法
-    - 模拟
+    - 时间复杂度
     - 枚举
-    - 贪心
+    - 模拟
     - 二分
+    - 贪心
+    - 数组的使用
+    - 基础数学
     - 分治
+    - 倍增
+    - 随机
+    - 分块
+    - 离散化
     - 搜索
 
 - 图论算法
@@ -102,8 +109,7 @@
  */
 
 
-int Cal(int a, int b)
-{
+int Cal(int a, int b) {
     int c = a + b; // 工程上，从安全角度，还会要求 if 判断，a + b 是否会溢出
     return c;
 }
@@ -111,14 +117,12 @@ int Cal(int a, int b)
 // 工程上对于字符串的处理一定要慎重。
 // 一般字符串传入，都是需要带上长度
 // 如果仅仅只是输出之类，可以不带，根据 `\0`
-char* Get(char c[], int cnt) 
-{
+char* Get(char c[], int cnt)  {
     scanf("%s", c); // 工程上，scanf 的调用也是需要判断返回值得
     return c;
 }
 
-int main()
-{
+int main() {
     int a = 0;
     int b = 0; // 不建议 int a = 0, b = 0; 为什么不能这么写的原因，我也不记得了
     printf("%d\n", Cal(a, b));

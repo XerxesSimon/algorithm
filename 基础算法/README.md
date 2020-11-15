@@ -152,7 +152,7 @@ sprintf()
 ```
 
 ### 搜索
-```
+```c++
 出口、标记、枚举
 #include <bits/stdc++.h>
 using namespace std;
@@ -188,10 +188,9 @@ int dfs(int x, int y) {
 
 
 - 倍增（快进多少倍）
-- 随机化
+- 随机
 - 离散化
 - 分块
-- 精度问题
 
 https://blog.csdn.net/qq_39861188/article/details/84191528
 
